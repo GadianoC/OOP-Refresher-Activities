@@ -1,29 +1,39 @@
 
-# from abc import ABC, abstractmethod
+from abc import ABC, abstractmethod
 
-# class Vehicle(ABC):
+class Vehicle(ABC):
 
-#     @abstractmethod
-#     def move(self):
-#         pass
+    @abstractmethod
+    def move(self):
+        pass
 
-# class Car(Vehicle):
-#     # Implement the move method for the Car class
+class Car(Vehicle):
 
-# class Bicycle(Vehicle):
-#     # Implement the move method for the Bicycle class
+    def move(self):
+        return 'The car is driving'
+    # Implement the move method for the Car class
 
-# class Boat(Vehicle):
-#     # Implement the move method for the Boat class
+class Bicycle(Vehicle):
 
-# def start_vehicle(vehicle):
-#     # Call the move method of the given vehicle object and print the returned string
+    def move(self):
+        return 'the bicycle is pedaling'
+    # Implement the move method for the Bicycle class
 
-# # Test your implementation
-# car = Car()
-# bicycle = Bicycle()
-# boat = Boat()
+class Boat(Vehicle):
 
-# start_vehicle(car)
-# start_vehicle(bicycle)
-# start_vehicle(boat)
+    def move(self):
+        return 'the boat is sailing'
+    # Implement the move method for the Boat class
+
+def start_vehicle(vehicle):
+    print(vehicle.move())
+    # Call the move method of the given vehicle object and print the returned string
+
+# Test your implementation
+car = Car()
+bicycle = Bicycle()
+boat = Boat()
+
+start_vehicle(car)
+start_vehicle(bicycle)
+start_vehicle(boat)
